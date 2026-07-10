@@ -33,24 +33,24 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="relative w-full flex items-center justify-between px-6 py-6 md:px-10 lg:px-14 bg-transparent z-50 animate-entrance" style={{ animationDelay: '50ms' }}>
+      <nav className="relative w-full flex items-center justify-between px-6 py-5 md:px-10 lg:px-14 bg-transparent z-50">
         {/* Wordmark */}
         <a
           href="/"
           onClick={closeMenu}
-          className="text-xl font-bold tracking-tight text-gray-900 hover:text-black hover:scale-[1.02] active:scale-100 transition-premium duration-300 min-h-[44px] inline-flex items-center"
+          className="text-xl font-bold tracking-tight text-gray-900 hover:text-black transition-colors min-h-[44px] inline-flex items-center"
         >
           {brand}
         </a>
 
         {/* Center nav links — desktop only */}
-        <ul className="hidden md:flex items-center gap-10 list-none m-0 p-0">
+        <ul className="hidden md:flex items-center gap-8 list-none m-0 p-0">
           {navLinks.map((link) => (
             <li key={link}>
               <a
                 href={`#${link.toLowerCase()}`}
                 className="text-[15px] font-medium text-gray-500 hover:text-gray-900
-                  transition-premium duration-300 py-2 block"
+                  transition-colors duration-200"
               >
                 {link}
               </a>
@@ -63,7 +63,7 @@ export default function Navbar() {
           <a
             href="#contact"
             className="rounded-full bg-gray-900 px-6 py-2.5 text-sm font-medium text-white
-              hover:bg-black hover:scale-[1.04] active:scale-95 transition-premium duration-300 min-h-[44px] flex items-center justify-center shadow-sm"
+              hover:bg-black hover:scale-[1.03] active:scale-100 transition-all duration-200 min-h-[44px] flex items-center justify-center"
           >
             {contactLabel}
           </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
         {/* Hamburger toggle button — visible on mobile/tablet */}
         <button
           onClick={toggleMenu}
-          className="flex md:hidden items-center justify-center w-11 h-11 rounded-full border border-gray-200 bg-white/95 text-gray-700 hover:text-gray-900 active:scale-95 transition-premium duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 z-50 cursor-pointer"
+          className="flex md:hidden items-center justify-center w-11 h-11 rounded-full border border-gray-200 bg-white/95 text-gray-700 hover:text-gray-900 active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-gray-300 z-50 cursor-pointer"
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isMenuOpen}
         >
@@ -110,9 +110,8 @@ export default function Navbar() {
 
       {/* Drawer Overlay Menu for Mobile/Tablet */}
       <div
-        className={`fixed inset-0 bg-[#e9e9e9]/98 backdrop-blur-md z-45 flex flex-col items-center justify-center gap-8 px-6 transition-all duration-300 md:hidden ${
-          isMenuOpen ? 'opacity-100 pointer-events-auto visible' : 'opacity-0 pointer-events-none invisible'
-        }`}
+        className={`fixed inset-0 bg-[#e9e9e9]/98 backdrop-blur-md z-45 flex flex-col items-center justify-center gap-8 px-6 transition-all duration-300 md:hidden ${isMenuOpen ? 'opacity-100 pointer-events-auto visible' : 'opacity-0 pointer-events-none invisible'
+          }`}
       >
         <ul className="flex flex-col items-center gap-6 list-none m-0 p-0 text-center">
           {navLinks.map((link) => (
@@ -132,8 +131,8 @@ export default function Navbar() {
         <a
           href="#contact"
           onClick={closeMenu}
-          className="rounded-full bg-gray-900 px-10 py-3.5 text-lg font-medium text-white
-            hover:bg-black active:scale-95 transition-premium duration-300 min-h-[44px] flex items-center justify-center shadow-lg"
+          className="rounded-full bg-gray-900 px-10 py-3 text-lg font-medium text-white
+            hover:bg-black active:scale-95 transition-all duration-200 min-h-[44px] flex items-center justify-center shadow-lg"
         >
           {contactLabel}
         </a>
