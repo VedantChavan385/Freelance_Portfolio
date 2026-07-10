@@ -1,12 +1,19 @@
+import React from 'react';
+
 interface SpeechBubbleProps {
   text: string;
   position: 'left' | 'right';
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export default function SpeechBubble({ text, position, className = '' }: SpeechBubbleProps) {
+export default function SpeechBubble({ text, position, className = '', style }: SpeechBubbleProps) {
   return (
-    <div className={`absolute flex items-center gap-[clamp(0.35rem,0.6vw,0.5rem)] select-none ${className}`}>
+    <div
+      style={style}
+      className={`absolute flex items-center gap-[clamp(0.35rem,0.6vw,0.5rem)] select-none
+        hover:scale-[1.03] transition-premium duration-300 ease-out ${className}`}
+    >
       {/* Decorative dot — only on the left bubble */}
       {position === 'left' && (
         <span className="h-[clamp(0.5rem,0.7vw,0.625rem)] w-[clamp(0.5rem,0.7vw,0.625rem)] rounded-full bg-gray-900 shrink-0" />
@@ -15,10 +22,10 @@ export default function SpeechBubble({ text, position, className = '' }: SpeechB
       <div className="relative">
         {/* Bubble body */}
         <span
-          className="inline-block rounded-full bg-white
+          className="inline-block rounded-full bg-white/95 backdrop-blur-[2px]
             px-[clamp(0.875rem,1.5vw,1.25rem)] py-[clamp(0.35rem,0.6vw,0.5rem)]
             text-[clamp(0.7rem,0.9vw,0.8125rem)] font-medium text-gray-800
-            shadow-[0_2px_8px_rgba(0,0,0,0.06)] border border-gray-200/80
+            shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-gray-200/60
             whitespace-nowrap"
         >
           {text}
