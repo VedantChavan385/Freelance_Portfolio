@@ -18,7 +18,7 @@ export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-transparent">
       {/* ── DESKTOP & TABLET VIEWPORT (md and up) ─────────────────── */}
-      <div className="hidden md:flex relative w-full mx-auto max-w-[1440px] min-h-[clamp(85vh,90vh,92vh)] flex-col items-center justify-end px-[clamp(16px,4vw,80px)] pb-[clamp(1rem,3vh,2rem)]">
+      <div className="hidden md:flex relative w-full ml-auto mr-auto max-w-[1440px] min-h-[clamp(85vh,90vh,92vh)] flex-col items-center justify-end px-[clamp(16px,4vw,80px)] pb-[clamp(1rem,3vh,2rem)]">
         {/* Watermark "DESIGNER" */}
         <span
           className="absolute left-1/2 -translate-x-1/2 bottom-[clamp(2%,3vw,6%)]

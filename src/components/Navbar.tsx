@@ -33,85 +33,87 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="relative w-full flex items-center justify-between px-6 py-5 md:px-10 lg:px-14 bg-transparent z-50">
-        {/* Wordmark */}
-        <a
-          href="/"
-          onClick={closeMenu}
-          className="text-xl font-bold tracking-tight text-gray-900 hover:text-black transition-colors min-h-[44px] inline-flex items-center"
+      <header className="relative w-full bg-transparent z-50 pt-[32px] pb-[16px] md:pt-[40px]">
+        {/* Centered Navbar Container — using bulletproof inline margin centering */}
+        <div 
+          style={{ marginLeft: 'auto', marginRight: 'auto' }}
+          className="w-[88vw] max-w-[1200px] flex items-center justify-between px-4"
         >
-          {brand}
-        </a>
-
-        {/* Center nav links — desktop only */}
-        <ul className="hidden md:flex items-center gap-8 list-none m-0 p-0">
-          {navLinks.map((link) => (
-            <li key={link}>
-              <a
-                href={`#${link.toLowerCase()}`}
-                className="text-[15px] font-medium text-gray-500 hover:text-gray-900
-                  transition-colors duration-200"
-              >
-                {link}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Right section: Contact button + decorative dot — desktop only */}
-        <div className="hidden md:flex items-center gap-5">
+          
+          {/* Left Wordmark Logo */}
           <a
-            href="#contact"
-            className="rounded-full bg-gray-900 px-6 py-2.5 text-sm font-medium text-white
-              hover:bg-black hover:scale-[1.03] active:scale-100 transition-all duration-200 min-h-[44px] flex items-center justify-center"
+            href="/"
+            onClick={closeMenu}
+            className="text-[20px] font-bold tracking-tight text-gray-900 hover:text-black transition-colors min-h-[44px] inline-flex items-center"
           >
-            {contactLabel}
+            {brand}
           </a>
 
-          {/* Decorative dot — far right */}
-          <span
-            className="h-3.5 w-3.5 rounded-full bg-gray-900 flex-shrink-0"
-            aria-hidden="true"
-          />
-        </div>
+          {/* Center Navigation Links — desktop only */}
+          <ul className="hidden md:flex items-center gap-[48px] list-none m-0 p-0 translate-y-[1px]">
+            {navLinks.map((link) => (
+              <li key={link}>
+                <a
+                  href={`#${link.toLowerCase()}`}
+                  className="text-[14px] font-medium tracking-tight text-gray-900 hover:text-gray-500
+                    transition-colors duration-200 py-2 block"
+                >
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        {/* Hamburger toggle button — visible on mobile/tablet */}
-        <button
-          onClick={toggleMenu}
-          className="flex md:hidden items-center justify-center w-11 h-11 rounded-full border border-gray-200 bg-white/95 text-gray-700 hover:text-gray-900 active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-gray-300 z-50 cursor-pointer"
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={isMenuOpen}
-        >
-          {isMenuOpen ? (
-            /* Close Icon */
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
+          {/* Right Section: Compact Contact Button — desktop only */}
+          <div className="hidden md:flex items-center">
+            <a
+              href="#contact"
+              className="rounded-full bg-gray-900 px-[22px] py-[8px] text-[13px] font-semibold text-white
+                hover:bg-black transition-all duration-200 min-h-[38px] flex items-center justify-center shadow-sm"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            /* Hamburger Menu Icon */
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          )}
-        </button>
-      </nav>
+              {contactLabel}
+            </a>
+          </div>
+
+          {/* Hamburger toggle button — visible on mobile/tablet */}
+          <button
+            onClick={toggleMenu}
+            className="flex md:hidden items-center justify-center w-11 h-11 rounded-full border border-gray-200 bg-white/95 text-gray-700 hover:text-gray-900 active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-gray-300 z-50 cursor-pointer"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? (
+              /* Close Icon */
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              /* Hamburger Menu Icon */
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            )}
+          </button>
+        </div>
+      </header>
 
       {/* Drawer Overlay Menu for Mobile/Tablet */}
       <div
-        className={`fixed inset-0 bg-[#e9e9e9]/98 backdrop-blur-md z-45 flex flex-col items-center justify-center gap-8 px-6 transition-all duration-300 md:hidden ${isMenuOpen ? 'opacity-100 pointer-events-auto visible' : 'opacity-0 pointer-events-none invisible'
-          }`}
+        className={`fixed inset-0 bg-[#e9e9e9]/98 backdrop-blur-md z-45 flex flex-col items-center justify-center gap-8 px-6 transition-all duration-300 md:hidden ${
+          isMenuOpen ? 'opacity-100 pointer-events-auto visible' : 'opacity-0 pointer-events-none invisible'
+        }`}
       >
         <ul className="flex flex-col items-center gap-6 list-none m-0 p-0 text-center">
           {navLinks.map((link) => (
@@ -131,7 +133,7 @@ export default function Navbar() {
         <a
           href="#contact"
           onClick={closeMenu}
-          className="rounded-full bg-gray-900 px-10 py-3 text-lg font-medium text-white
+          className="rounded-full bg-gray-900 px-10 py-3.5 text-lg font-medium text-white
             hover:bg-black active:scale-95 transition-all duration-200 min-h-[44px] flex items-center justify-center shadow-lg"
         >
           {contactLabel}
