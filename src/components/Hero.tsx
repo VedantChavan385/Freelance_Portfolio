@@ -13,11 +13,11 @@ export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-transparent">
       {/* ── Container ─────────────────────────────────────── */}
-      <div className="relative w-full mx-auto max-w-[1440px] min-h-[85vh] md:min-h-[92vh] flex flex-col items-center justify-end px-[clamp(16px,4vw,80px)] pb-4 md:pb-0">
+      <div className="relative w-full mx-auto max-w-[1440px] min-h-[clamp(85vh,90vh,92vh)] flex flex-col items-center justify-end px-[clamp(16px,4vw,80px)] pb-[clamp(1rem,3vh,2rem)]">
 
         {/* ── Watermark "DESIGNER" ──────────────────────── */}
         <span
-          className="absolute left-1/2 -translate-x-1/2 bottom-[8%] md:bottom-[2%]
+          className="absolute left-1/2 -translate-x-1/2 bottom-[clamp(2%,3vw,6%)]
             text-[clamp(4.5rem,20vw,17.5rem)] font-black leading-none tracking-tighter
             text-[#dadada] select-none pointer-events-none z-0 whitespace-nowrap"
           aria-hidden="true"
@@ -26,7 +26,7 @@ export default function Hero() {
         </span>
 
         {/* ── Relative Wrapper for Portrait, Tags & Bubbles ── */}
-        <div className="relative z-10 w-[260px] sm:w-[320px] md:w-[400px] lg:w-[440px] xl:w-[480px] flex-shrink-0 mt-8 md:mt-6">
+        <div className="relative z-10 w-[clamp(250px,21.6vw+10.5rem,480px)] flex-shrink-0 mt-[clamp(1.5rem,3.5vw,2.5rem)]">
           {/* Portrait Image */}
           {imgStatus !== 'error' ? (
             <>
@@ -110,7 +110,7 @@ export default function Hero() {
           className="relative z-10 w-full text-center font-black leading-[0.85] tracking-[-0.06em]
             text-[#0a0a0a]
             text-[clamp(2.5rem,11.5vw,11rem)]
-            -mt-[4vw] md:-mt-[3vw] lg:-mt-6 pb-2
+            -mt-[clamp(1rem,2.8vw,1.75rem)] pb-2
             select-none"
           style={{
             maskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
@@ -121,7 +121,7 @@ export default function Hero() {
         </h1>
 
         {/* ── Mobile skill tags (stacked cleanly below name on small viewports) ────── */}
-        <div className="flex md:hidden flex-wrap justify-center gap-2 mt-4 pb-6 px-4 z-20">
+        <div className="flex md:hidden flex-wrap justify-center gap-2 mt-[clamp(0.75rem,2vw,1.5rem)] pb-6 px-4 z-20">
           {[...skillTags.left, ...skillTags.right].map((label) => (
             <span
               key={label}
