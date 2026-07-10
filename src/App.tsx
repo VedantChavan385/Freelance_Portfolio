@@ -3,7 +3,7 @@ import Hero from './components/Hero';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#e9e9e9]">
+    <div className="min-h-screen bg-transparent">
       <Navbar />
       <Hero />
     </div>

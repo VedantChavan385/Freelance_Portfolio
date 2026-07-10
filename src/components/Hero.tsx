@@ -11,14 +11,14 @@ export default function Hero() {
   );
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#e9e9e9]">
+    <section className="relative w-full overflow-hidden bg-transparent">
       {/* ── Container ─────────────────────────────────────── */}
-      <div className="relative mx-auto max-w-[1440px] min-h-[85vh] md:min-h-[92vh] flex flex-col items-center justify-end px-4 pb-4 md:pb-0">
+      <div className="relative w-full mx-auto max-w-[1440px] min-h-[85vh] md:min-h-[92vh] flex flex-col items-center justify-end px-[clamp(16px,4vw,80px)] pb-4 md:pb-0">
 
         {/* ── Watermark "DESIGNER" ──────────────────────── */}
         <span
-          className="absolute left-1/2 -translate-x-1/2 bottom-[6%] md:bottom-[2%]
-            text-[20vw] md:text-[17vw] lg:text-[15rem] xl:text-[18rem] font-black leading-none tracking-tighter
+          className="absolute left-1/2 -translate-x-1/2 bottom-[8%] md:bottom-[2%]
+            text-[clamp(4.5rem,20vw,17.5rem)] font-black leading-none tracking-tighter
             text-[#dadada] select-none pointer-events-none z-0 whitespace-nowrap"
           aria-hidden="true"
         >
@@ -26,7 +26,7 @@ export default function Hero() {
         </span>
 
         {/* ── Relative Wrapper for Portrait, Tags & Bubbles ── */}
-        <div className="relative z-10 w-[260px] sm:w-[340px] md:w-[400px] lg:w-[440px] xl:w-[480px] flex-shrink-0 mt-8 md:mt-6">
+        <div className="relative z-10 w-[260px] sm:w-[320px] md:w-[400px] lg:w-[440px] xl:w-[480px] flex-shrink-0 mt-8 md:mt-6">
           {/* Portrait Image */}
           {imgStatus !== 'error' ? (
             <>
@@ -35,10 +35,9 @@ export default function Hero() {
                 alt={`Portrait of ${name}`}
                 onLoad={() => setImgStatus('loaded')}
                 onError={() => setImgStatus('error')}
-                className={`relative w-full h-auto object-cover object-top grayscale
-                  transition-opacity duration-500
-                  ${imgStatus === 'loaded' ? 'opacity-100' : 'opacity-0'}`}
+                className="relative w-full h-auto object-cover object-top grayscale transition-opacity duration-500"
                 style={{
+                  opacity: imgStatus === 'loaded' ? 1 : 0,
                   maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 72%, transparent 98%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
                   WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 72%, transparent 98%), linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
                   maskComposite: 'intersect',
@@ -106,8 +105,23 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ── Mobile skill tags (stacked below image) ────── */}
-        <div className="flex md:hidden flex-wrap justify-center gap-2 mt-6 px-4 z-20">
+        {/* ── Name with gradient fade ────────────────────── */}
+        <h1
+          className="relative z-10 w-full text-center font-black leading-[0.85] tracking-[-0.06em]
+            text-[#0a0a0a]
+            text-[clamp(2.5rem,11.5vw,11rem)]
+            -mt-[4vw] md:-mt-[3vw] lg:-mt-6 pb-2
+            select-none"
+          style={{
+            maskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
+          }}
+        >
+          {name}
+        </h1>
+
+        {/* ── Mobile skill tags (stacked cleanly below name on small viewports) ────── */}
+        <div className="flex md:hidden flex-wrap justify-center gap-2 mt-4 pb-6 px-4 z-20">
           {[...skillTags.left, ...skillTags.right].map((label) => (
             <span
               key={label}
@@ -119,20 +133,6 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* ── Name with gradient fade ────────────────────── */}
-        <h1
-          className="relative z-10 w-full text-center font-black leading-[0.85] tracking-[-0.06em]
-            text-[#0a0a0a]
-            text-[13vw] sm:text-[11vw] md:text-[10vw] lg:text-[9rem] xl:text-[11rem]
-            -mt-[5vw] md:-mt-[3vw] lg:-mt-6 pb-2
-            select-none"
-          style={{
-            maskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
-          }}
-        >
-          {name}
-        </h1>
       </div>
     </section>
   );

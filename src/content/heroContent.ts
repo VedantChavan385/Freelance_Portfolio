@@ -23,5 +23,5 @@ export const heroContent: HeroContent = {
   ],
   name: 'Elian Moreau',
   watermarkText: 'DESIGNER',
-  portraitSrc: '/portrait-black-man.png',
+  portraitSrc: '/portrait-black-man-transparent.png',
 };
