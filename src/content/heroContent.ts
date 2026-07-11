@@ -11,7 +11,7 @@ export interface HeroContent {
 
 export const heroContent: HeroContent = {
   brand: 'Novaire',
-  navLinks: ['Work', 'Blog', 'About'],
+  navLinks: ['Work', 'Services', 'Process', 'About', 'FAQ'],
   contactLabel: 'Contact',
   skillTags: {
     left: ['Web Design', 'Branding', '3D Motion'],
