@@ -6,25 +6,25 @@ export default function WhyChooseMe() {
       <div className="max-w-[1200px] w-[88vw] ml-auto mr-auto px-4">
         {/* Section Pill Badge */}
         <div className="flex justify-center mb-6">
-          <span className="px-4 py-1 bg-gray-200/80 rounded-full text-[11px] font-bold uppercase tracking-widest text-gray-600">
+          <span className="px-2.5 py-0.5 bg-gray-200/60 rounded text-[11px] font-semibold text-gray-600 tracking-tight select-none">
             Why choose me
           </span>
         </div>
 
         {/* Section Heading */}
-        <h2 className="text-center text-[clamp(2.25rem,6vw,3.75rem)] font-bold tracking-tighter leading-[1.05] text-[#0a0a0a] max-w-2xl mx-auto mb-16">
-          Why clients choose to work with <span className="font-serif italic font-normal text-gray-900">me.</span>
+        <h2 className="text-center text-[clamp(2rem,5.5vw,3.25rem)] font-semibold tracking-tight leading-[1.1] text-gray-950 max-w-2xl mx-auto mb-16">
+          Why clients choose to work with <span className="font-serif italic font-normal text-gray-950">me.</span>
         </h2>
 
         {/* 2x2 Grid of differentiators */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {differentiators.map((diff, idx) => (
             <div 
               key={idx}
-              className="bg-white/70 border border-gray-200/30 rounded-3xl p-8 md:p-10 relative overflow-hidden transition-all duration-300 hover:bg-white hover:shadow-[0_10px_30px_rgba(0,0,0,0.03)] flex gap-6 items-start"
+              className="bg-white/80 border border-gray-200/20 rounded-2xl p-8 relative overflow-hidden transition-all duration-300 hover:bg-white hover:shadow-[0_12px_24px_rgba(0,0,0,0.03)] flex gap-6 items-start group"
             >
               {/* Emoji Badge circular container */}
-              <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-gray-100 border border-gray-200/20 flex items-center justify-center text-xl shadow-sm">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gray-100 border border-gray-200/10 flex items-center justify-center text-xl shadow-sm">
                 {diff.emoji}
               </div>
 
@@ -33,7 +33,7 @@ export default function WhyChooseMe() {
                 <h3 className="text-lg font-bold tracking-tight text-gray-950">
                   {diff.title}
                 </h3>
-                <p className="mt-3 text-[13px] text-gray-500 font-semibold leading-relaxed">
+                <p className="mt-3 text-[13px] text-gray-400 font-semibold leading-relaxed">
                   {diff.description}
                 </p>
               </div>
@@ -42,7 +42,7 @@ export default function WhyChooseMe() {
         </div>
 
         {/* Highlight Stats Row */}
-        <div className="bg-white/40 border border-gray-200/40 rounded-3xl p-10 md:p-12 shadow-[0_4px_25px_rgba(0,0,0,0.01)] grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 items-center divide-y md:divide-y-0 md:divide-x divide-gray-200/60 text-center">
+        <div className="bg-white/80 border border-gray-200/20 rounded-2xl p-10 md:p-12 shadow-[0_4px_16px_rgba(0,0,0,0.015)] grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 items-center divide-y md:divide-y-0 md:divide-x divide-gray-200/60 text-center">
           {stats.map((stat, idx) => (
             <div 
               key={idx}
@@ -51,7 +51,7 @@ export default function WhyChooseMe() {
               <span className="block text-4xl md:text-5xl font-extrabold tracking-tight text-gray-950">
                 {stat.value}
               </span>
-              <span className="block text-[10px] font-bold uppercase tracking-widest text-gray-400 mt-2.5">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-gray-400 mt-2">
                 {stat.label}
               </span>
             </div>
