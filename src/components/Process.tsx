@@ -49,18 +49,18 @@ export default function Process() {
       <div className="max-w-[1200px] w-[88vw] ml-auto mr-auto px-4">
         {/* Section Pill Badge */}
         <div className="flex justify-center mb-6">
-          <span className="px-4 py-1 bg-gray-200/80 rounded-full text-[11px] font-bold uppercase tracking-widest text-gray-600">
+          <span className="px-2.5 py-0.5 bg-gray-200/60 rounded text-[11px] font-semibold text-gray-600 tracking-tight select-none">
             How I work
           </span>
         </div>
 
         {/* Section Heading */}
-        <h2 className="text-center text-[clamp(2.25rem,6vw,3.75rem)] font-bold tracking-tighter leading-[1.05] text-[#0a0a0a] max-w-2xl mx-auto mb-4">
-          See how I get things <span className="font-serif italic font-normal text-gray-900">done.</span>
+        <h2 className="text-center text-[clamp(2rem,5.5vw,3.25rem)] font-semibold tracking-tight leading-[1.1] text-gray-950 max-w-2xl mx-auto mb-4">
+          See how I get things <span className="font-serif italic font-normal text-gray-950">done.</span>
         </h2>
         
         {/* Subtitle */}
-        <p className="text-center text-gray-500 text-[clamp(0.875rem,1.4vw,1.1rem)] font-medium max-w-xl mx-auto mb-20">
+        <p className="text-center text-gray-500 text-[clamp(0.85rem,1.3vw,1.05rem)] font-medium max-w-xl mx-auto mb-16">
           A structured approach to delivering clear and effective design solutions every time.
         </p>
 
@@ -68,9 +68,9 @@ export default function Process() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* LEFT: Steps List with Vertical Line connector */}
-          <div className="lg:col-span-6 relative flex flex-col pl-6">
+          <div className="lg:col-span-6 relative flex flex-col">
             {/* The vertical timeline bar */}
-            <div className="absolute left-[34px] top-4 bottom-4 w-[2px] bg-gray-200/80 z-0">
+            <div className="absolute left-[11px] top-8 bottom-8 w-[2px] bg-gray-200 z-0">
               <div 
                 className="w-full bg-gray-950 transition-all duration-500 ease-out"
                 style={{ 
@@ -80,73 +80,94 @@ export default function Process() {
               />
             </div>
 
-            {processSteps.map((step, idx) => {
-              const isSelected = activeStep === idx;
-              return (
-                <div 
-                  key={idx}
-                  onClick={() => setActiveStep(idx)}
-                  className={`flex gap-6 items-start py-6 cursor-pointer relative z-10 select-none group transition-all duration-300 ${
-                    isSelected ? 'opacity-100 scale-101' : 'opacity-40 hover:opacity-75'
-                  }`}
-                >
-                  {/* Outer circle for line intersection */}
-                  <div className="flex-shrink-0 flex items-center justify-center">
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
-                      isSelected 
-                        ? 'bg-gray-950 border-gray-950 text-white shadow-md' 
-                        : 'bg-white border-gray-200 text-gray-500 group-hover:border-gray-400 group-hover:text-gray-800'
-                    }`}>
-                      {renderStepIcon(step.iconName)}
+            <div className="flex flex-col gap-1.5">
+              {processSteps.map((step, idx) => {
+                const isSelected = activeStep === idx;
+                return (
+                  <div 
+                    key={idx}
+                    onClick={() => setActiveStep(idx)}
+                    className="flex items-center gap-6 relative py-3 group select-none"
+                  >
+                    {/* Timeline dot */}
+                    <div className="flex-shrink-0 w-6 flex justify-center z-10">
+                      <div className={`transition-all duration-300 rounded-full cursor-pointer ${
+                        isSelected 
+                          ? 'w-3.5 h-3.5 border-4 border-[#efefef] bg-gray-950 shadow-sm scale-110' 
+                          : 'w-3 h-3 border-2 border-gray-300 bg-white group-hover:border-gray-400'
+                      }`} />
                     </div>
-                  </div>
 
-                  {/* Text meta of the step */}
-                  <div className="flex-grow pt-1.5 pr-2">
-                    <div className="flex items-center gap-3">
-                      <span className="text-[11px] font-bold uppercase tracking-widest text-gray-400">
-                        Step {step.number}
-                      </span>
+                    {/* Step Card */}
+                    <div className={`flex-grow bg-white/60 border border-gray-200/20 rounded-2xl p-5 flex gap-4 items-center transition-all duration-300 cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.005)] hover:bg-white/90 ${
+                      isSelected 
+                        ? 'bg-white/95 border-gray-200/80 shadow-[0_4px_16px_rgba(0,0,0,0.015)] scale-[1.008]' 
+                        : 'opacity-50 hover:opacity-85'
+                    }`}>
+                      {/* Left icon circle */}
+                      <div className="w-9 h-9 rounded-full bg-gray-100/90 flex items-center justify-center text-gray-700 flex-shrink-0">
+                        {renderStepIcon(step.iconName)}
+                      </div>
+
+                      {/* Content */}
+                      <div className="flex-grow">
+                        <h4 className="text-[16px] font-bold text-gray-950 tracking-tight">
+                          {step.title}
+                        </h4>
+                        <p className="text-[13px] text-gray-500 font-semibold mt-1 leading-normal max-w-sm">
+                          {step.description}
+                        </p>
+                      </div>
+
+                      {/* Step Number circular tag */}
+                      <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center text-[10px] font-bold text-gray-400 flex-shrink-0 select-none">
+                        {step.number}
+                      </div>
                     </div>
-                    <h3 className="text-xl font-bold tracking-tight text-gray-950 mt-1">
-                      {step.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-500 font-semibold max-w-md">
-                      {step.description}
-                    </p>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
 
-          {/* RIGHT: Sticky Image & Testimonial quote card */}
-          <div className="lg:col-span-6 lg:sticky lg:top-32 flex flex-col gap-6">
-            {/* Visual Frame */}
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-white border border-gray-200/30 shadow-[0_4px_25px_rgba(0,0,0,0.015)]">
-              <img 
-                src={processQuote.image} 
-                alt="Process flower representation" 
-                className="w-full h-full object-cover grayscale transition-all duration-1000 ease-out"
-                loading="lazy"
-              />
-            </div>
+          {/* RIGHT: Sticky Unified Image & Testimonial Card */}
+          <div className="lg:col-span-6 lg:sticky lg:top-28 flex flex-col">
+            <div className="bg-white border border-gray-200/20 rounded-2xl overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.015)] flex flex-col w-full">
+              {/* Integrated Image Header */}
+              <div className="relative h-[280px] md:h-[360px] overflow-hidden bg-gray-50">
+                <img 
+                  src={processQuote.image} 
+                  alt="Process flower representation" 
+                  className="w-full h-full object-cover grayscale"
+                  style={{
+                    WebkitMaskImage: 'linear-gradient(to bottom, black 72%, transparent 98%)',
+                    maskImage: 'linear-gradient(to bottom, black 72%, transparent 98%)'
+                  }}
+                  loading="lazy"
+                />
+              </div>
 
-            {/* Testimonial Quote frame */}
-            <div className="bg-white/80 border border-gray-200/40 rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.02)] flex flex-col gap-4 relative overflow-hidden">
-              <span className="text-[100px] font-serif italic text-gray-900/5 leading-none absolute -top-4 -left-2 select-none pointer-events-none">
-                “
-              </span>
-              <p className="text-gray-700 text-sm md:text-[15px] font-semibold leading-relaxed relative z-10 italic">
-                "{processQuote.text}"
-              </p>
-              <div className="flex items-center gap-2.5 relative z-10 pt-2 border-t border-gray-100">
-                <span className="text-xs font-bold text-gray-900">
-                  — {processQuote.author}
+              {/* Testimonial Quote details */}
+              <div className="p-7 md:p-8 flex flex-col gap-3 relative">
+                {/* Serif quotation mark */}
+                <span className="text-[56px] font-serif italic text-gray-300 leading-none h-6 block mb-1 select-none pointer-events-none">
+                  “
                 </span>
-                <span className="text-[10px] font-semibold text-gray-400">
-                  Lead Designer & Developer
-                </span>
+
+                {/* Quote Text */}
+                <p className="text-gray-700 text-[14px] md:text-[15px] font-semibold leading-relaxed relative z-10 mb-2 italic">
+                  {processQuote.text}
+                </p>
+
+                {/* Author Meta */}
+                <div className="flex items-center gap-2.5 pt-4 border-t border-gray-100/80">
+                  <span className="text-xs font-bold text-gray-900">
+                    — {processQuote.author}
+                  </span>
+                  <span className="text-[10px] font-semibold text-gray-400">
+                    Lead Designer & Developer
+                  </span>
+                </div>
               </div>
             </div>
           </div>

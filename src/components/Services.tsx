@@ -50,40 +50,40 @@ export default function Services() {
     <section id="services" className="py-28 bg-[#efefef] text-gray-900 border-t border-gray-200/50">
       <div className="max-w-[1200px] w-[88vw] ml-auto mr-auto px-4">
         {/* Section Heading Tag */}
-        <div className="mb-6 flex justify-start">
-          <span className="px-4 py-1 bg-gray-200/80 rounded-full text-[11px] font-bold uppercase tracking-widest text-gray-600">
+        <div className="mb-4">
+          <span className="px-2.5 py-0.5 bg-gray-200/60 rounded text-[11px] font-semibold text-gray-600 tracking-tight select-none">
             Services
           </span>
         </div>
 
-        {/* Section Intro Area */}
+        {/* Section Intro Area (Two column-like align-end layout) */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6 mb-16">
-          <h2 className="text-[clamp(2.25rem,6vw,3.75rem)] font-bold tracking-tighter leading-[1.05] text-[#0a0a0a] max-w-xl">
-            How I can help bring ideas to <span className="font-serif italic font-normal text-gray-900">life.</span>
+          <h2 className="text-[clamp(1.75rem,4.5vw,2.5rem)] font-semibold tracking-tight leading-[1.1] text-gray-950 max-w-xl">
+            How I can help bring ideas to <span className="font-serif italic font-normal text-gray-950">life.</span>
           </h2>
-          <p className="text-gray-500 font-semibold text-[15px] leading-relaxed lg:max-w-md">
+          <p className="text-gray-500 font-semibold text-[clamp(0.85rem,1.3vw,1rem)] leading-relaxed lg:max-w-[340px] lg:mb-1">
             Focused solutions to design better products and meaningful user experiences.
           </p>
         </div>
 
         {/* Services Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, idx) => (
             <div 
               key={idx}
-              className="bg-white/70 border border-gray-200/30 rounded-3xl p-10 relative overflow-hidden transition-all duration-300 hover:bg-white hover:shadow-[0_10px_30px_rgba(0,0,0,0.03)] group"
+              className="bg-white/80 border border-gray-200/20 rounded-2xl p-8 pb-9 relative transition-all duration-300 hover:bg-white hover:shadow-[0_12px_24px_rgba(0,0,0,0.03)] group"
             >
-              {/* Icon top-right */}
-              <div className="absolute top-10 right-10 w-11 h-11 bg-gray-900 text-white rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-black group-hover:scale-105">
+              {/* Icon top-right (overlapping borders) */}
+              <div className="absolute -top-4 -right-4 w-9 h-9 bg-gray-950 text-white rounded-full flex items-center justify-center shadow-sm transition-all duration-300 group-hover:bg-black group-hover:scale-105 z-10">
                 {renderIcon(service.iconName)}
               </div>
 
               {/* Card Meta details */}
-              <div className="pt-8">
-                <h3 className="text-xl font-bold tracking-tight text-gray-950">
+              <div className="pt-2">
+                <h3 className="text-[17px] font-bold tracking-tight text-gray-950 mb-3">
                   {service.title}
                 </h3>
-                <p className="mt-4 text-[13px] text-gray-400 font-bold leading-relaxed max-w-[85%]">
+                <p className="text-[13px] text-gray-400 font-semibold leading-relaxed max-w-[90%]">
                   {service.description}
                 </p>
               </div>
@@ -91,14 +91,16 @@ export default function Services() {
           ))}
         </div>
 
-        {/* Infinite Scrolling Marquee Strip */}
-        <div className="relative w-full overflow-hidden py-10 mt-20 border-t border-b border-gray-200/40 bg-white/20 select-none rounded-2xl">
-          <div className="flex w-max gap-12 whitespace-nowrap animate-marquee">
+        {/* Infinite Scrolling Marquee Strip - Borderless Capsule Badges */}
+        <div className="relative w-full overflow-hidden py-8 mt-16 select-none">
+          <div className="flex w-max gap-4 whitespace-nowrap animate-marquee">
             {/* Seamless double loop for scrolling alignment */}
             {servicesMarquee.concat(servicesMarquee).map((item, idx) => (
-              <span key={idx} className="text-xs font-bold uppercase tracking-widest text-gray-400 flex items-center gap-3">
-                {item} 
-                <span className="h-1.5 w-1.5 rounded-full bg-gray-300 inline-block" />
+              <span 
+                key={idx} 
+                className="px-4.5 py-1.5 bg-gray-200/45 text-gray-500 rounded-full text-[11px] font-semibold tracking-tight shadow-sm select-none pointer-events-none"
+              >
+                {item}
               </span>
             ))}
           </div>
