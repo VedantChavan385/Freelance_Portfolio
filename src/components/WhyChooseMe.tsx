@@ -6,7 +6,7 @@ export default function WhyChooseMe() {
       <div className="max-w-[1200px] w-[88vw] ml-auto mr-auto px-4">
         {/* Section Pill Badge */}
         <div className="flex justify-center mb-6">
-          <span className="px-2.5 py-0.5 bg-gray-200/60 rounded text-[11px] font-semibold text-gray-600 tracking-tight select-none">
+          <span className="px-2.5 py-0.5 bg-gray-200/60 rounded-full text-[11px] font-semibold text-gray-600 tracking-tight select-none">
             Why choose me
           </span>
         </div>
