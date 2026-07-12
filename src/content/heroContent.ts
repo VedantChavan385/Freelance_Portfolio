@@ -10,7 +10,7 @@ export interface HeroContent {
 }
 
 export const heroContent: HeroContent = {
-  brand: 'Novaire',
+  brand: 'VC WORKS',
   navLinks: ['Work', 'Services', 'Process', 'About', 'FAQ'],
   contactLabel: 'Contact',
   skillTags: {
@@ -18,13 +18,11 @@ export const heroContent: HeroContent = {
     right: ['App Design', 'Illustration', 'Logo Design'],
   },
   speechBubbles: [
-    { text: 'Hello, my name is', position: 'left' },
+    { text: 'Hey there, I am', position: 'left' },
     { text: "Let's work together!", position: 'right' },
   ],
-  name: 'Elian Moreau',
+  name: 'Vedant Chavan',
   watermarkText: 'DESIGNER',
-  portraitSrc: '/short.png',
-  // portraitSrc: '/ChatGPT Image Jun 21, 2026, 11_05_09 PM.png',
   portraitSrc: '/VCPortrait.png',
   // portraitSrc: '/portrait-transparent-user.png',
 };

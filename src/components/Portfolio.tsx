@@ -9,7 +9,7 @@ export default function Portfolio() {
     : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section id="work" className="py-36 bg-[#efefef] text-gray-900 border-t border-gray-200/50">
+    <section id="work" className="py-28 md:pt-36 bg-[#efefef] text-gray-900 border-t border-gray-200/50">
       {/* Fix #13: Constrained container 1280px with proper padding */}
       <div className="w-[88vw] max-w-[1280px] ml-auto mr-auto px-8">
 
@@ -42,10 +42,8 @@ export default function Portfolio() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-[18px] py-2 rounded-full text-[15px] font-medium transition-all duration-200 cursor-pointer focus:outline-none select-none ${
-                  isSelected
-                    ? 'bg-gray-900 text-white shadow-sm'
-                    : 'bg-white/80 text-gray-500 border border-gray-200/60 hover:bg-white hover:text-gray-900'
+                className={`pill-button-light cursor-pointer focus:outline-none select-none ${
+                  isSelected ? 'active' : ''
                 }`}
               >
                 {category}

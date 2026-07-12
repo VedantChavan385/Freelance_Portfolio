@@ -51,7 +51,7 @@ export default function Services() {
       <div className="max-w-[1200px] w-[88vw] ml-auto mr-auto px-4">
         {/* Section Heading Tag */}
         <div className="mb-4">
-          <span className="px-2.5 py-0.5 bg-gray-200/60 rounded text-[11px] font-semibold text-gray-600 tracking-tight select-none">
+          <span className="px-2.5 py-0.5 bg-gray-200/60 rounded-full text-[11px] font-semibold text-gray-600 tracking-tight select-none">
             Services
           </span>
         </div>
