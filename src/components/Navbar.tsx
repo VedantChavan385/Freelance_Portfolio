@@ -35,11 +35,11 @@ export default function Navbar() {
     <>
       <header className="relative w-full bg-transparent z-50 pt-[32px] pb-[16px] md:pt-[40px]">
         {/* Centered Navbar Container — using bulletproof inline margin centering */}
-        <div 
+        <div
           style={{ marginLeft: 'auto', marginRight: 'auto' }}
           className="w-[88vw] max-w-[1200px] flex items-center justify-between px-4"
         >
-          
+
           {/* Left Wordmark Logo */}
           <a
             href="/"
@@ -111,9 +111,8 @@ export default function Navbar() {
 
       {/* Drawer Overlay Menu for Mobile/Tablet */}
       <div
-        className={`fixed inset-0 bg-[#e9e9e9]/98 backdrop-blur-md z-45 flex flex-col items-center justify-center gap-8 px-6 transition-all duration-300 md:hidden ${
-          isMenuOpen ? 'opacity-100 pointer-events-auto visible' : 'opacity-0 pointer-events-none invisible'
-        }`}
+        className={`fixed inset-0 bg-[#e9e9e9]/98 backdrop-blur-md z-45 flex flex-col items-center justify-center gap-8 px-6 transition-all duration-300 md:hidden ${isMenuOpen ? 'opacity-100 pointer-events-auto visible' : 'opacity-0 pointer-events-none invisible'
+          }`}
       >
         <ul className="flex flex-col items-center gap-6 list-none m-0 p-0 text-center">
           {navLinks.map((link) => (

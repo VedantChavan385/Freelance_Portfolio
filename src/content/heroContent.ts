@@ -23,5 +23,8 @@ export const heroContent: HeroContent = {
   ],
   name: 'Elian Moreau',
   watermarkText: 'DESIGNER',
-  portraitSrc: '/portrait-transparent-user.png',
+  portraitSrc: '/short.png',
+  // portraitSrc: '/ChatGPT Image Jun 21, 2026, 11_05_09 PM.png',
+  portraitSrc: '/VCPortrait.png',
+  // portraitSrc: '/portrait-transparent-user.png',
 };
