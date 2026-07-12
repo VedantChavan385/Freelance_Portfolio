@@ -2,10 +2,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { label: 'LinkedIn', url: '#' },
-    { label: 'Twitter', url: '#' },
-    { label: 'GitHub', url: '#' },
-    { label: 'Dribbble', url: '#' }
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/vedant-chavan-479511291/' },
+    { label: 'GitHub', url: 'https://github.com/VedantChavan385' },
+    { label: 'Email', url: 'mailto:vedantchavan385@gmail.com' }
   ];
 
   const quickNav = [
@@ -23,15 +22,15 @@ export default function Footer() {
         {/* Call to Action Statement */}
         <div className="flex flex-col items-center text-center mb-16">
           <h2 className="text-[clamp(2.5rem,7vw,4.5rem)] font-bold tracking-tighter leading-none text-[#0a0a0a] max-w-3xl mb-8">
-            Let's build something <span className="font-serif italic font-normal text-gray-900">great</span> together.
+            Let's build something <span className="font-serif italic font-normal text-gray-900">scalable</span> together.
           </h2>
           
           {/* Big Premium Contact Link */}
           <a 
-            href="mailto:hello@elianmoreau.com" 
+            href="mailto:vedantchavan385@gmail.com" 
             className="text-lg md:text-xl font-bold tracking-tight text-gray-900 hover:text-gray-500 pb-2 border-b-2 border-gray-950/80 transition-colors"
           >
-            hello@elianmoreau.com
+            vedantchavan385@gmail.com
           </a>
         </div>
 
@@ -40,12 +39,12 @@ export default function Footer() {
           
           {/* Brand Wordmark & Copyright info */}
           <div className="md:col-span-6 flex flex-col items-start gap-3">
-            <span className="text-xl font-extrabold tracking-tight text-gray-950">
-              Novaire
+            <span className="text-xl font-extrabold tracking-tight text-gray-955">
+              Vedant
             </span>
             <span className="text-[12px] text-gray-400 font-semibold leading-normal">
-              © {currentYear} Elian Moreau. All rights reserved.<br />
-              Premium Portfolio template.
+              © {currentYear} Vedant Chavan. All rights reserved.<br />
+              Portfolio Built with React + Tailwind v4.
             </span>
           </div>
 

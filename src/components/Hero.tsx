@@ -11,26 +11,26 @@ export default function Hero() {
   );
 
   // Greeting bubble text
-  const greetingText = speechBubbles.find(b => b.position === 'left')?.text || 'Hello, my name is';
+  const greetingText = speechBubbles.find(b => b.position === 'left')?.text || 'Hey there, I am';
   // CTA button text
-  const ctaText = speechBubbles.find(b => b.position === 'right')?.text || "Let's work together!";
+  const ctaText = speechBubbles.find(b => b.position === 'right')?.text || "Let's create something amazing!";
 
   return (
     <section className="relative w-full overflow-hidden bg-transparent">
       {/* ── DESKTOP & TABLET VIEWPORT (md and up) ─────────────────── */}
-      <div className="hidden md:flex relative w-full ml-auto mr-auto max-w-[1440px] min-h-[clamp(85vh,90vh,92vh)] flex-col items-center justify-end px-[clamp(16px,4vw,80px)] pb-[clamp(1rem,3vh,2rem)]">
-        {/* Watermark "DESIGNER" */}
+      <div className="hidden md:flex relative w-full ml-auto mr-auto max-w-[1440px] min-h-screen flex-col items-center justify-end px-4 md:px-12 pb-0">
+        {/* Watermark "DESIGNER" — solid filled light gray like reference */}
         <span
-          className="absolute left-1/2 -translate-x-1/2 bottom-[clamp(2%,3vw,6%)]
-            text-[clamp(4.5rem,20vw,17.5rem)] font-black leading-none tracking-tighter
-            text-[#dadada] select-none pointer-events-none z-0 whitespace-nowrap"
+          className="absolute left-1/2 -translate-x-1/2 bottom-[8%]
+            text-7xl md:text-[11rem] lg:text-[15rem] xl:text-[17rem] font-black leading-none tracking-wider
+            text-[#e0e0e0] select-none pointer-events-none z-0 whitespace-nowrap uppercase"
           aria-hidden="true"
         >
           {watermarkText}
         </span>
 
         {/* Relative Wrapper for Portrait, Tags & Bubbles */}
-        <div className="relative z-10 w-[clamp(250px,21.6vw+10.5rem,480px)] flex-shrink-0 mt-[clamp(1.5rem,3.5vw,2.5rem)]">
+        <div className="relative z-10 w-[320px] md:w-[420px] lg:w-[480px] xl:w-[520px] flex-shrink-0 mt-6 md:mt-10">
           {imgStatus !== 'error' ? (
             <>
               <img
@@ -107,16 +107,17 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Name with gradient fade */}
+        {/* Name with gradient fade — bleeds off bottom like reference */}
         <h1
-          className="relative z-10 w-full text-center font-black leading-[0.85] tracking-[-0.06em]
+          className="relative z-10 w-full text-center font-black leading-[0.82] tracking-[-0.05em]
             text-[#0a0a0a]
-            text-[clamp(2.5rem,11.5vw,11rem)]
-            -mt-[clamp(1rem,2.8vw,1.75rem)] pb-2
+            text-5xl md:text-[7rem] lg:text-[10rem] xl:text-[12rem]
+            -mt-4 md:-mt-6 lg:-mt-10
             select-none"
           style={{
-            maskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom, black 55%, transparent 100%)',
+            maskImage: 'linear-gradient(to bottom, black 50%, transparent 95%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, black 50%, transparent 95%)',
+            paddingBottom: '0.15em',
           }}
         >
           {name}
@@ -191,8 +192,8 @@ export default function Hero() {
           {[...skillTags.left, ...skillTags.right].map((label) => (
             <span
               key={label}
-              className="inline-flex items-center rounded-full bg-white px-4 py-2
-                text-xs font-semibold text-gray-600 shadow-sm border border-gray-200/80 select-none"
+              className="rounded-full bg-[#e6e6e6] text-gray-700 select-none"
+              style={{ padding: '8px 20px', fontSize: '13px', fontWeight: 500, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', border: '1px solid rgba(0,0,0,0.06)' }}
             >
               {label}
             </span>

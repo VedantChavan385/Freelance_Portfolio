@@ -44,7 +44,7 @@ export default function Navbar() {
           <a
             href="/"
             onClick={closeMenu}
-            className="text-[20px] font-bold tracking-tight text-gray-900 hover:text-black transition-colors min-h-[44px] inline-flex items-center"
+            className="text-[22px] font-extrabold tracking-tight text-gray-900 hover:text-black transition-colors min-h-[44px] inline-flex items-center"
           >
             {brand}
           </a>
@@ -55,7 +55,7 @@ export default function Navbar() {
               <li key={link}>
                 <a
                   href={`#${link.toLowerCase()}`}
-                  className="text-[14px] font-medium tracking-tight text-gray-900 hover:text-gray-500
+                  className="text-[15px] font-medium tracking-tight text-gray-700 hover:text-gray-900
                     transition-colors duration-200 py-2 block"
                 >
                   {link}
@@ -68,15 +68,14 @@ export default function Navbar() {
           <div className="hidden md:flex items-center">
             <a
               href="#contact"
-              className="rounded-full bg-gray-900 px-[22px] py-[8px] text-[13px] font-semibold text-white
-                hover:bg-black transition-all duration-200 min-h-[38px] flex items-center justify-center shadow-sm"
+              className="pill-button-dark"
             >
               {contactLabel}
             </a>
           </div>
 
           {/* Hamburger toggle button — visible on mobile/tablet */}
-          <button
+          <button   
             onClick={toggleMenu}
             className="flex md:hidden items-center justify-center w-11 h-11 rounded-full border border-gray-200 bg-white/95 text-gray-700 hover:text-gray-900 active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-gray-300 z-50 cursor-pointer"
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
