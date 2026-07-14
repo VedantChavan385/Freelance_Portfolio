@@ -11,8 +11,14 @@ import SkillTag from '../components/ui/SkillTag';
 import { SERVICES, PROCESS_STEPS, GENERAL_FAQ } from '../lib/data/services';
 import { ABOUT_DATA } from '../lib/data/about';
 import { VARIANTS } from '../lib/animations';
+import useSEO from '../hooks/useSEO';
 
 export default function Services() {
+  useSEO({
+    title: 'Services',
+    description: 'Explore full-stack web engineering, custom AI integrations, SaaS architectures, UI/UX designs, and page speed audits.'
+  });
+
   const serviceGridRef = useRef(null);
   const techStackRef = useRef(null);
 

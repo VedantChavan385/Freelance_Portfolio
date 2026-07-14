@@ -8,6 +8,7 @@ import Button from '../components/ui/Button';
 import CTA from '../components/sections/CTA';
 import { PROJECTS } from '../lib/data/projects';
 import { VARIANTS } from '../lib/animations';
+import useSEO from '../hooks/useSEO';
 
 // Custom GitHub Icon matching the standard Lucide/Feather path
 function GithubIcon(props) {
@@ -30,6 +31,11 @@ function GithubIcon(props) {
 export default function ProjectDetail() {
   const { slug } = useParams();
   const project = PROJECTS.find((p) => p.slug === slug);
+
+  useSEO({
+    title: project ? `${project.title} - Project` : 'Project',
+    description: project ? project.description : 'Read through the development case study.'
+  });
 
   if (!project) {
     return (

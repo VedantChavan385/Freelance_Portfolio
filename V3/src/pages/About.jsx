@@ -10,8 +10,14 @@ import CTA from '../components/sections/CTA';
 import { ABOUT_DATA } from '../lib/data/about';
 import { VARIANTS } from '../lib/animations';
 import AnimatedLetter from '../components/animations/AnimatedLetter';
+import useSEO from '../hooks/useSEO';
 
 export default function About() {
+  useSEO({
+    title: 'About Me',
+    description: 'Learn about Vedant Chavan, a Full-Stack Developer specializing in React, Next.js, Node.js, and custom AI applications.'
+  });
+
   const introScrollRef = useRef(null);
   const statsRef = useRef(null);
   const skillsRef = useRef(null);

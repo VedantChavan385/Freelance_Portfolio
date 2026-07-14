@@ -6,8 +6,14 @@ import ProjectCard from '../components/cards/ProjectCard';
 import CTA from '../components/sections/CTA';
 import { PROJECTS } from '../lib/data/projects';
 import { VARIANTS } from '../lib/animations';
+import useSEO from '../hooks/useSEO';
 
 export default function Work() {
+  useSEO({
+    title: 'Work',
+    description: 'Explore Vedant Chavan\'s selected development work, case studies, and scalable application designs.'
+  });
+
   return (
     <PageWrapper>
       <div className="pt-32 pb-24 bg-black relative select-none min-h-screen">

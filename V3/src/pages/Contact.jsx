@@ -10,8 +10,14 @@ import Button from '../components/ui/Button';
 import FAQ from '../components/sections/FAQ';
 import CTA from '../components/sections/CTA';
 import { CONTACT_DATA } from '../lib/data/contact';
+import useSEO from '../hooks/useSEO';
 
 export default function Contact() {
+  useSEO({
+    title: 'Contact',
+    description: 'Get in touch with Vedant Chavan for custom web development contracts, full-stack architectures, and SaaS engineering collaborations.'
+  });
+
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
