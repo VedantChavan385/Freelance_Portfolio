@@ -7,7 +7,8 @@ export default function CTA({
   title = "Join the lab", 
   description = "Prisma is a worldwide network of visual artists bound by passion and hunger to unlock potential through our unique perspectives.",
   buttonText = "Join the lab",
-  buttonHref = "#"
+  buttonHref,
+  buttonTo = "/contact"
 }) {
   return (
     <Section background="bg-black" className="py-16 md:py-24 border-t border-zinc-900/30 relative select-none">
@@ -23,7 +24,7 @@ export default function CTA({
           {description}
         </p>
 
-        <Button href={buttonHref} className="mt-4">
+        <Button to={buttonTo} href={buttonHref} className="mt-4">
           {buttonText}
         </Button>
       </Container>
