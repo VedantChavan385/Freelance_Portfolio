@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { useScroll } from 'framer-motion';
 import SectionHeading from '../ui/SectionHeading';
 import AnimatedLetter from '../animations/AnimatedLetter';
+import { ABOUT_DATA } from '../../lib/data/about';
 
 export default function About() {
   const containerRef = useRef(null);
@@ -11,13 +12,8 @@ export default function About() {
     offset: ['start 0.8', 'end 0.2']
   });
 
-  const headingSegments = [
-    { text: "I am Marcus Chen,", className: "font-normal text-[#E1E0CC]" },
-    { text: "a self-taught director.", className: "italic font-serif text-primary" },
-    { text: "I have skills in color grading, visual effects, and narrative design.", className: "font-normal text-[#E1E0CC]" }
-  ];
-
-  const bodyText = "Over the last seven years, I have worked with Parallax, a Berlin-based production house that crafts cinema, series, and Noir Studio in Paris. Together, we have created work that has earned international acclaim at several major festivals.";
+  const headingSegments = ABOUT_DATA.introTitleSegments;
+  const bodyText = ABOUT_DATA.bioText;
 
   return (
     <section id="about" className="bg-black py-12 px-4 md:py-20 md:px-6 w-full select-none">
@@ -25,7 +21,7 @@ export default function About() {
         
         {/* Heading */}
         <SectionHeading 
-          badge="Visual arts"
+          badge={ABOUT_DATA.introBadge}
           titleSegments={headingSegments}
           alignment="center"
         />
