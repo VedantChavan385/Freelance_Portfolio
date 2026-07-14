@@ -242,7 +242,11 @@ CTA
 
 Footer
 ```
-
+AI Applications
+Full-Stack Web Apps
+SaaS Development
+UI/UX Development
+Performance Optimization
 Focus on business outcomes rather than listing technologies.
 
 ------------------------------------------------------------------------
