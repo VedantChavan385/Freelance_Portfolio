@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useScroll } from 'framer-motion';
-import WordsPullUpMultiStyle from './WordsPullUpMultiStyle';
-import AnimatedLetter from './AnimatedLetter';
+import SectionHeading from '../ui/SectionHeading';
+import AnimatedLetter from '../animations/AnimatedLetter';
 
 export default function About() {
   const containerRef = useRef(null);
@@ -23,15 +23,12 @@ export default function About() {
     <section id="about" className="bg-black py-12 px-4 md:py-20 md:px-6 w-full select-none">
       <div className="max-w-6xl mx-auto bg-[#101010] rounded-2xl md:rounded-[2rem] py-16 px-6 sm:px-12 md:py-28 md:px-20 text-center flex flex-col items-center gap-8 md:gap-12 relative overflow-hidden">
         
-        {/* Top Label */}
-        <span className="text-primary text-[10px] sm:text-xs uppercase tracking-[0.2em] font-medium">
-          Visual arts
-        </span>
-
         {/* Heading */}
-        <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl max-w-4xl mx-auto leading-[1.05] sm:leading-[0.95] md:leading-[0.9] tracking-tight">
-          <WordsPullUpMultiStyle segments={headingSegments} />
-        </div>
+        <SectionHeading 
+          badge="Visual arts"
+          titleSegments={headingSegments}
+          alignment="center"
+        />
 
         {/* Scroll Reveal Body Paragraph */}
         <div ref={containerRef} className="max-w-2xl mx-auto mt-4 sm:mt-6">

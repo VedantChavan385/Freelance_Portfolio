@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
-import WordsPullUpMultiStyle from './WordsPullUpMultiStyle';
+import WordsPullUpMultiStyle from '../animations/WordsPullUpMultiStyle';
 
 export default function Features() {
   const gridRef = useRef(null);
