@@ -35,7 +35,7 @@ export default function Services() {
           {/* Header */}
           <SectionHeading 
             badge="Services"
-            title="Studio Capabilities"
+            title="Services & Expertise"
             subtitle="I engineer scalable backends, performant frontend visuals, and automated AI solutions."
             alignment="left"
           />

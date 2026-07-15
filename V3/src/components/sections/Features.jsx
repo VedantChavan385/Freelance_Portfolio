@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import WordsPullUpMultiStyle from '../animations/WordsPullUpMultiStyle';
 
 export default function Features() {
@@ -8,11 +9,11 @@ export default function Features() {
   const isInView = useInView(gridRef, { once: true, margin: "-100px" });
 
   const line1Segments = [
-    { text: "Studio-grade workflows for visionary creators.", className: "text-primary font-normal" }
+    { text: "High-performance code built for scalability.", className: "text-primary font-normal" }
   ];
   
   const line2Segments = [
-    { text: "Built for pure vision. Powered by art.", className: "text-gray-500 font-normal" }
+    { text: "Clean components. Intelligent features.", className: "text-gray-500 font-normal" }
   ];
 
   const containerVariants = {
@@ -40,40 +41,42 @@ export default function Features() {
     {
       type: "video",
       videoUrl: "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260406_133058_0504132a-0cf3-4450-a370-8ea3b05c95d4.mp4",
-      label: "Your creative canvas."
+      label: "Engineered for speed."
     },
     {
       type: "text",
       number: "01",
-      title: "Project Storyboard.",
+      title: "Clean Architecture.",
       icon: "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171918_4a5edc79-d78f-4637-ac8b-53c43c220606.png&w=1280&q=85",
       items: [
-        "Visual timeline mapping",
-        "Interactive moodboards",
-        "Frame-by-frame pacing",
-        "Real-time collaboration"
+        "Modular code patterns",
+        "RESTful & WebSocket interfaces",
+        "Structured database systems",
+        "Comprehensive testing setups"
       ]
     },
     {
       type: "text",
       number: "02",
-      title: "Smart Critiques.",
+      title: "Dynamic Frontend.",
       icon: "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171741_ed9845ab-f5b2-4018-8ce7-07cc01823522.png&w=1280&q=85",
       items: [
-        "AI composition analysis",
-        "Automated tone & contrast notes",
-        "Seamless editing tool integrations"
+        "Interactive design systems",
+        "Optimized client bundling",
+        "Fluid responsive layouts",
+        "Premium micro-interactions"
       ]
     },
     {
       type: "text",
       number: "03",
-      title: "Immersion Capsule.",
+      title: "Smart AI Pipelines.",
       icon: "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171809_f56666dc-c099-4778-ad82-9ad4f209567b.png&w=1280&q=85",
       items: [
-        "Distraction-free notification silencing",
-        "Procedural ambient soundscapes",
-        "Automated focus schedule syncing"
+        "Vector RAG integrations",
+        "Google Gemini & OpenAI APIs",
+        "Intelligent automation flows",
+        "Semantic search indexing"
       ]
     }
   ];
@@ -165,13 +168,13 @@ export default function Features() {
 
                 {/* Bottom Section */}
                 <div className="mt-6 sm:mt-0">
-                  <a
-                    href="#"
+                  <Link
+                    to="/services"
                     className="flex items-center gap-1.5 text-xs sm:text-sm text-primary font-medium group/link transition-colors duration-300 hover:text-white mt-auto self-start"
                   >
                     <span>Learn more</span>
                     <ArrowRight className="w-4 h-4 transform -rotate-45 transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                  </a>
+                  </Link>
                 </div>
               </motion.div>
             );

@@ -24,7 +24,7 @@ export default function Work() {
           <SectionHeading 
             badge="Portfolio"
             title="Selected Work"
-            subtitle="Explore our visual stories, cinematic work, and brand experiences."
+            subtitle="A curated selection of web applications, AI integrations, and full-stack solutions."
             alignment="left"
           />
 

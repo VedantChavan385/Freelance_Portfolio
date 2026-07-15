@@ -60,33 +60,33 @@ export const PROCESS_STEPS = [
   {
     number: "01",
     title: "Discovery",
-    description: "We map project scopes, audit requirements, and align visual frameworks before writing any line of code."
+    description: "I map project scopes, audit requirements, and align visual frameworks before writing any line of code."
   },
   {
     number: "02",
     title: "Architecture & Design",
-    description: "We build database models, draft API structures, and define typographic hierarchies in a modular system."
+    description: "I build database models, draft API structures, and define typographic hierarchies in a modular system."
   },
   {
     number: "03",
     title: "Iterative Development",
-    description: "We implement views in bi-weekly milestones, ensuring clean components, responsive checks, and code-splits."
+    description: "I implement views in bi-weekly milestones, ensuring clean components, responsive checks, and code-splits."
   },
   {
     number: "04",
     title: "Launch & Support",
-    description: "We deploy statically-compiled sites or containerized servers with integrated analytics and performance checks."
+    description: "I deploy statically-compiled sites or containerized servers with integrated analytics and performance checks."
   }
 ];
 
 export const GENERAL_FAQ = [
   {
     question: "What is your main technology stack?",
-    answer: "We primarily work with React, Next.js, Node.js, Express, Tailwind CSS, PostgreSQL, and Firebase, leveraging Vite for lightning-fast frontend bundles."
+    answer: "I primarily work with React, Next.js, Node.js, Express, Tailwind CSS, PostgreSQL, and MongoDB, leveraging Vite for lightning-fast frontend bundles."
   },
   {
     question: "Do you offer post-launch maintenance services?",
-    answer: "Yes, we offer monthly retainer packages that cover security updates, feature additions, layout audits, and database query tuning."
+    answer: "Yes, I offer monthly retainer packages that cover security updates, feature additions, layout audits, and database query tuning."
   },
   {
     question: "How long does a standard SaaS development project take?",
@@ -94,6 +94,6 @@ export const GENERAL_FAQ = [
   },
   {
     question: "Can you convert an existing design to Next.js or React?",
-    answer: "Yes. We take Figma designs and build pixel-perfect, accessible, semantic React code using Tailwind CSS for responsive styling."
+    answer: "Yes. I take Figma designs and build pixel-perfect, accessible, semantic React code using Tailwind CSS for responsive styling."
   }
 ];
