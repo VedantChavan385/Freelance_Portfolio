@@ -7,15 +7,15 @@ export const COLORS = {
 };
 
 export const NAV_LINKS = [
-  { name: "Our story", href: "#about" },
-  { name: "Collective", href: "#features" },
-  { name: "Workshops", href: "#" },
-  { name: "Programs", href: "#" },
-  { name: "Inquiries", href: "#" }
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Work", href: "/work" },
+  { name: "Services", href: "/services" },
+  { name: "Contact", href: "/contact" }
 ];
 
 export const SOCIAL_LINKS = [
-  { name: "GitHub", href: "#" },
-  { name: "Instagram", href: "#" },
-  { name: "LinkedIn", href: "#" }
+  { name: "GitHub", href: "https://github.com/VedantChavan385" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/vedant-chavan-479511291/" },
+  { name: "Email", href: "mailto:vedantchavan385@gmail.com" }
 ];
