@@ -32,7 +32,7 @@ export default function Hero() {
             {/* Left 8 columns - Giant Heading */}
             <div className="col-span-12 md:col-span-8 flex items-end">
               <WordsPullUp
-                text="Prisma"
+                text="Vedant"
                 showAsterisk={true}
                 className="text-[26vw] sm:text-[24vw] md:text-[22vw] lg:text-[20vw] xl:text-[19vw] 2xl:text-[20vw] font-medium leading-[0.85] tracking-[-0.07em] select-none"
                 style={{ color: '#E1E0CC' }}
@@ -48,7 +48,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.5, ease: customEase }}
                 className="text-primary/70 text-xs sm:text-sm md:text-base leading-[1.2] font-light max-w-sm"
               >
-                Prisma is a worldwide network of visual artists, filmmakers and storytellers bound not by place, status or labels but by passion and hunger to unlock potential through our unique perspectives.
+                I help startups, founders, and businesses transform ideas into fast, scalable, and user-centric digital products. Specializing in full-stack engineering and intelligent AI solutions.
               </motion.p>
 
               {/* CTA Button Wrapper */}
@@ -57,7 +57,7 @@ export default function Hero() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.7, ease: customEase }}
               >
-                <Button to="/contact">Join the lab</Button>
+                <Button to="/contact">Let's build</Button>
               </motion.div>
             </div>
 

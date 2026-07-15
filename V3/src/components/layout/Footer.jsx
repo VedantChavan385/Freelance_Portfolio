@@ -8,10 +8,10 @@ export default function Footer() {
         {/* Left Side: Brand/Logo */}
         <div className="flex flex-col items-center md:items-start gap-1">
           <Link to="/" className="text-xl font-medium tracking-tight text-[#E1E0CC] hover:opacity-85 transition-opacity">
-            Prisma<span className="text-primary">*</span>
+            Vedant<span className="text-primary">*</span>
           </Link>
           <span className="text-gray-500 text-xs sm:text-sm font-light">
-            © {new Date().getFullYear()} Prisma. All rights reserved.
+            © {new Date().getFullYear()} Vedant Chavan. All rights reserved.
           </span>
         </div>
 
@@ -35,7 +35,9 @@ export default function Footer() {
             {SOCIAL_LINKS.map((link) => (
               <a 
                 key={link.name} 
-                href={link.href} 
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
                 className="text-gray-500 hover:text-primary transition-colors duration-300 font-medium"
               >
                 {link.name}

@@ -4,9 +4,9 @@ import Button from '../ui/Button';
 import WordsPullUp from '../animations/WordsPullUp';
 
 export default function CTA({ 
-  title = "Join the lab", 
-  description = "Prisma is a worldwide network of visual artists bound by passion and hunger to unlock potential through our unique perspectives.",
-  buttonText = "Join the lab",
+  title = "Let's build together", 
+  description = "I am currently available for freelance contracts and full-time remote engineering opportunities. Let's transform your ideas into scalable products.",
+  buttonText = "Get in touch",
   buttonHref,
   buttonTo = "/contact"
 }) {
