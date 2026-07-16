@@ -100,7 +100,7 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* CTA Bottom Section */}
+      {/* 6. Original CTA Section */}
       <CTA />
     </PageWrapper>
   );

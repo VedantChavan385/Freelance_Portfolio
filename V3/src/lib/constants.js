@@ -7,10 +7,10 @@ export const COLORS = {
 };
 
 export const NAV_LINKS = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Work", href: "/work" },
-  { name: "Services", href: "/services" },
+  { name: "Home", href: "#hero" },
+  { name: "About", href: "#about" },
+  { name: "Work", href: "#work-section" },
+  { name: "Services", href: "#services-section" },
   { name: "Contact", href: "/contact" }
 ];
 
