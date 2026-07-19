@@ -1,177 +1,222 @@
 export const PROJECTS = [
   {
-    title: "Inventory CRM",
-    slug: "inventory-crm",
-    description: "A high-performance enterprise resource planning and client management suite built for logistics startups.",
-    thumbnail: "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171918_4a5edc79-d78f-4637-ac8b-53c43c220606.png&w=1280&q=85",
-    tags: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"],
-    overview: "Inventory CRM bridges the gap between warehouses, product inventory systems, and customer relationships. It enables real-time tracking of logistics hubs and automates customer updates during transport.",
-    problem: "Logistics companies struggle to sync inventory data with customer relations software. This lag leads to customer dissatisfaction due to inaccurate shipment schedules and stock levels.",
-    solution: "I designed a unified dashboard using WebSockets for live hub synchronization. I implemented automated email/SMS updates for transit changes and optimized PostgreSQL queries to handle millions of item updates daily.",
+    title: "OrganicSense",
+    slug: "organic-sense",
+    description: "An organic e-commerce catalog featuring fast checkout routes and responsive custom filters.",
+    thumbnail: "/OrganicSense/OrganicSenses Home page.png",
+    tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+    overview: "OrganicSense is a direct-to-consumer e-commerce marketplace for organic agricultural products and wellness oils.",
+    problem: "Traditional wellness platforms suffer from slow cart interactions, unoptimized search queries, and high dropoff rates on checkout pages.",
+    solution: "I designed an optimized checkout funnel, integrated instant search queries, and built a custom responsive inventory map.",
+    development: "Drafted database catalogs first, built card filter maps, integrated Stripe checkouts, and optimized server queries.",
+    challenges: "Managing inventory stock synchronization during concurrent checkout orders was resolved using ACID-compliant transaction controls.",
+    techStack: [
+      { name: "React", category: "Frontend" },
+      { name: "Node.js", category: "Backend" },
+      { name: "MongoDB", category: "Database" },
+      { name: "Tailwind CSS", category: "Styling" }
+    ],
+    gallery: [
+      { src: "/OrganicSense/OrganicSenses Home page.png", alt: "OrganicSense ecommerce catalog store" }
+    ],
+    results: [
+      { metric: "Checkout Dropoff", value: "-30%", description: "Frictionless checkout transitions" },
+      { metric: "Search Query Speed", value: "< 50ms", description: "Indexed agricultural database tags" }
+    ],
+    lessonsLearned: "One-click express checkout options increase store orders and lower cart dropoffs.",
+    github: "",
+    liveDemo: "",
+    nextProject: "remitout",
+    prevProject: "word-blog"
+  },
+  {
+    title: "Remitout",
+    slug: "remitout",
+    description: "A cross-border currency conversion rate comparer and secure remittance booking landing page.",
+    thumbnail: "/Remitout/Home page.png",
+    tags: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    overview: "Remitout is a comprehensive cross-border remittance and international money transfer marketing and booking platform.",
+    problem: "International money transfers involve obscure exchange rate margins and confusing fee structures, reducing client trust.",
+    solution: "I developed a high-fidelity visual calculator with real-time rate comparison APIs, live transaction trackers, and a pixel-perfect design.",
+    development: "Built exchange calculation utilities first, integrated third-party currency API pools, and styled responsive pages matching precise Figma wireframes.",
+    challenges: "Synchronizing rapid market rate feeds without rendering jitter was solved using dynamic state debounce locks.",
+    techStack: [
+      { name: "React", category: "Frontend" },
+      { name: "Next.js", category: "Framework" },
+      { name: "Tailwind CSS", category: "Styling" },
+      { name: "Framer Motion", category: "Animations" }
+    ],
+    gallery: [
+      { src: "/Remitout/Home page.png", alt: "Remitout international remittance homepage calculator" }
+    ],
+    results: [
+      { metric: "Rate Query Speed", value: "< 150ms", description: "Cached currency rate endpoints" },
+      { metric: "Design Fidelity", value: "100%", description: "Pixel-perfect Figma code translation" }
+    ],
+    lessonsLearned: "Real-time indicators and fee breakdowns reduce client conversion friction and build trust.",
+    github: "",
+    liveDemo: "https://edfinlo.vercel.app/",
+    nextProject: "murph",
+    prevProject: "organic-sense"
+  },
+  {
+    title: "Murph",
+    slug: "murph",
+    description: "An interactive developer hub featuring custom terminal simulators, hardware graphs, and fluid motions.",
+    thumbnail: "/Murph/Home page.png",
+    tags: ["React", "Framer Motion", "Tailwind CSS", "Vite"],
+    overview: "Murph is a developer-focused interactive workspace featuring custom terminal dashboards, real-time metrics, and animations.",
+    problem: "Standard developer portfolios are static and fail to demonstrate interactive animations or clean CLI shell emulation capabilities.",
+    solution: "I built a retro-futuristic terminal UI with sandboxed command execution, dynamic memory tracking graphs, and custom Framer Motion page exits.",
+    development: "Designed standard visual components, built the web-based shell terminal emulator, and wrapped monitoring components using lightweight state loops.",
+    challenges: "Managing keyboard trap states in the terminal window for mobile layout views was solved using overlay keypads.",
+    techStack: [
+      { name: "React", category: "Frontend" },
+      { name: "Framer Motion", category: "Animations" },
+      { name: "Tailwind CSS", category: "Design" },
+      { name: "Vite", category: "Build Tools" }
+    ],
+    gallery: [
+      { src: "/Murph/Home page.png", alt: "Murph retro-interactive workspace homepage" }
+    ],
+    results: [
+      { metric: "User Interactions", value: "+80%", description: "High retention CLI sandbox logs" },
+      { metric: "Page Load Speed", value: "99/100", description: "Minimal javascript weight footprint" }
+    ],
+    lessonsLearned: "Gamification and sandboxed CLI utilities are extremely good hooks for developer interactions.",
+    github: "",
+    liveDemo: "https://murph-eight.vercel.app/",
+    nextProject: "inventry-crm",
+    prevProject: "remitout"
+  },
+  {
+    title: "Inventry CRM",
+    slug: "inventry-crm",
+    description: "A high-performance customer resource dashboard and WhatsApp-integrated communications hub built for real estate inventory managers.",
+    thumbnail: "/Inventry CRM/Home page.png",
+    tags: ["React", "Node.js", "PostgreSQL", "Socket.io"],
+    overview: "Inventry CRM is a high-performance customer relationship management and property tracker application designed for real estate and logistics managers. It bridges the gap between client requirements, active property listings, and WhatsApp communications.",
+    problem: "Real estate and inventory agents struggle to manage client requirements, property details, and location maps in unified dashboards. Valuable leads are lost due to delayed manually-typed WhatsApp follow-ups.",
+    solution: "I built a real-time web portal integrating properties mapping, WhatsApp template dispatchers, and requirements filtering to match client profiles to matching inventory slots.",
     development: "Developed in modular phases: first setting up database models and real-time synchronization hooks, followed by UI/UX dashboard panels, and ending with integration tests for message queues.",
     challenges: "Handling rapid websocket connection state changes on mobile devices during low-connectivity logistics transits was the largest hurdle, solved using progressive local-first caching.",
     techStack: [
       { name: "React", category: "Frontend" },
       { name: "Node.js", category: "Backend" },
       { name: "PostgreSQL", category: "Database" },
-      { name: "Tailwind CSS", category: "Design" }
+      { name: "Socket.io", category: "WebSockets" }
     ],
     gallery: [
-      { src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop", alt: "Logistics Dashboard interface showcase" },
-      { src: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?q=80&w=1200&auto=format&fit=crop", alt: "Analytics graphs preview" }
+      { src: "/Inventry CRM/Dashboard.png", alt: "Logistics Dashboard interface showcase" },
+      { src: "/Inventry CRM/Properties on maps.png", alt: "Interactive properties mapped coordinate overlays" },
+      { src: "/Inventry CRM/Property details.png", alt: "Detailed inventory listing details panel" },
+      { src: "/Inventry CRM/Requirements page.png", alt: "Client requirements filtering criteria setup" },
+      { src: "/Inventry CRM/Whatsapp integration page.png", alt: "Integrated WhatsApp message templates setup" },
+      { src: "/Inventry CRM/Screenshot 2026-04-08 003246.png", alt: "Client database information overview" }
     ],
     results: [
-      { metric: "Synchronization Lag", value: "< 150ms", description: "Near-instant hub updates" },
-      { metric: "Customer Support Tickets", value: "-45%", description: "Due to automated tracking updates" },
-      { metric: "Query Latency", value: "-60%", description: "PostgreSQL index tuning optimization" }
+      { metric: "Synchronization Lag", value: "< 100ms", description: "Real-time updates" },
+      { metric: "WhatsApp Delivery", value: "1-Click", description: "Automated template dispatches" },
+      { metric: "Query Latency", value: "-55%", description: "PostgreSQL query index improvements" }
     ],
     lessonsLearned: "Local-first optimistic UI updates improve user experiences in logistics fields with unreliable mobile data connectivity.",
     github: "",
-    liveDemo: "",
-    nextProject: "codebase-doc",
-    prevProject: "word-blog"
+    liveDemo: "https://inventory-crm-i73a.vercel.app/login",
+    nextProject: "edfinlo",
+    prevProject: "murph"
   },
   {
-    title: "CodeBaseDoc",
-    slug: "codebase-doc",
-    description: "An AI-powered documentation generator that analyzes workspace repositories and outputs semantic markdown files.",
-    thumbnail: "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171741_ed9845ab-f5b2-4018-8ce7-07cc01823522.png&w=1280&q=85",
-    tags: ["Next.js", "OpenAI API", "LangChain", "TypeScript"],
-    overview: "CodeBaseDoc scans directories, creates structured graphs of code connections, and uses LLMs to compile precise markdown documentation pages for developers.",
-    problem: "Developers spend thousands of hours writing and maintaining documentation, which quickly becomes stale as new features are merged.",
-    solution: "I created an automated pipeline that integrates into GitHub workflows. It parses abstract syntax trees (AST) to map code relationships, feeds clean contexts to generative models, and commits updated markdown docs.",
-    development: "Built as a CLI utility first, then wrapped in a Next.js web application for user-friendly repository connections and interactive editing panels.",
-    challenges: "Managing rate-limiting and context limits when feeding massive open-source repositories to LLMs was solved using chunking algorithms and structural summaries.",
+    title: "Edfinlo",
+    slug: "edfinlo",
+    description: "A secure financial loan compound calculator and scholarship match tool built for study-abroad student funding.",
+    thumbnail: "/Edfinlo/Home page.png",
+    tags: ["Next.js", "React", "Node.js", "MongoDB"],
+    overview: "Edfinlo is a financial planning and compound interest calculation engine that maps college tuition budgets and matches high school graduates with active scholarship grant databases.",
+    problem: "Students struggle to calculate tuition loan interest rates over long periods, and state grants databases are disjointed and difficult to navigate.",
+    solution: "I designed responsive debt charts, interest calculators, and scrapers to pull and index active state-sponsored scholarships.",
+    development: "Created compound interest mathematical models first, integrated scholarship aggregators, and wrapped them in interactive React chart dashboards.",
+    challenges: "Building an accessible, non-intimidating design for complex compound interest structures required extensive user interviews and layout tweaks.",
     techStack: [
       { name: "Next.js", category: "Framework" },
-      { name: "OpenAI API", category: "AI Integration" },
-      { name: "LangChain", category: "Agent Control" },
-      { name: "TypeScript", category: "Language" }
-    ],
-    gallery: [
-      { src: "https://images.unsplash.com/photo-1618401471353-b98aedd07871?q=80&w=1200&auto=format&fit=crop", alt: "Documentation panel interface" }
-    ],
-    results: [
-      { metric: "Documentation Time Saved", value: "85%", description: "Fully automated markdown pipelines" },
-      { metric: "Code Review Speed", value: "+20%", description: "Smarter context summaries" }
-    ],
-    lessonsLearned: "Tree-sitter structures provide a far cleaner context than feeding raw code file chunks directly to language models.",
-    github: "",
-    liveDemo: "",
-    nextProject: "digital-mentor",
-    prevProject: "inventory-crm"
-  },
-  {
-    title: "Digital Mentor",
-    slug: "digital-mentor",
-    description: "A personalized e-learning workspace connecting students with automated guides and video-call tutors.",
-    thumbnail: "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171809_f56666dc-c099-4778-ad82-9ad4f209567b.png&w=1280&q=85",
-    tags: ["React", "WebRTC", "Firebase", "Node.js"],
-    overview: "Digital Mentor facilitates remote learning by pairing WebRTC peer-to-peer audio-video calls with collaborative code and text editors.",
-    problem: "Static learning management systems lack direct human interactions and collaborative focus rooms, making distance learning feel isolated.",
-    solution: "I integrated a real-time collaborative workspace containing multi-user document synchronization, alongside audio-video channels for classrooms.",
-    development: "Developed the Firebase backend for auth and real-time DB states first, then set up the WebRTC signaling flow and React responsive workspaces.",
-    challenges: "Synchronizing state edits across whiteboard canvases on low-end tablets without input lag required optimizing redraw intervals using requestAnimationFrame.",
-    techStack: [
       { name: "React", category: "Frontend" },
-      { name: "WebRTC", category: "Media Streams" },
-      { name: "Firebase", category: "Backend / Signalling" },
-      { name: "Node.js", category: "Server" }
+      { name: "Node.js", category: "Backend" },
+      { name: "MongoDB", category: "Database" }
     ],
     gallery: [
-      { src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop", alt: "Online workspace visual view" }
+      { src: "/Edfinlo/Home page.png", alt: "Edfinlo financial calculator homepage" }
     ],
     results: [
-      { metric: "Course Completion Rates", value: "+30%", description: "Better student retention rates" },
-      { metric: "Session Startup Speed", value: "< 2s", description: "Firebase real-time DB routing" }
-    ],
-    lessonsLearned: "User feedback is far higher when video streams are accompanied by zero-install drawing whiteboards.",
-    github: "",
-    liveDemo: "",
-    nextProject: "edfinlo",
-    prevProject: "codebase-doc"
-  },
-  {
-    title: "EdFinlo",
-    slug: "edfinlo",
-    description: "A financial planning dashboard aimed at managing student debt and creating custom scholarship paths.",
-    thumbnail: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=600&auto=format&fit=crop",
-    tags: ["Vue.js", "Express", "MongoDB", "Tailwind CSS"],
-    overview: "EdFinlo assists high school graduates in estimating tuition budgets and matches them with active grant proposals using query classification APIs.",
-    problem: "Searching for college funding is a disjointed process, and students struggle to project compound interest levels on their private loans.",
-    solution: "I created visual charting tools and math engines for debt forecasts, accompanied by aggregated query scrapers that look for grants.",
-    development: "Designed financial estimation tools first, integrated with standard Plaid APIs for banking connections, and wrapped the dashboard inside Vue pages.",
-    challenges: "Building a accessible, non-intimidating design for complex compound interest structures required extensive user interviews and layout tweaks.",
-    techStack: [
-      { name: "Vue.js", category: "Frontend" },
-      { name: "Express", category: "Backend API" },
-      { name: "MongoDB", category: "Database" },
-      { name: "Tailwind CSS", category: "Styling" }
-    ],
-    gallery: [],
-    results: [
-      { metric: "Debt Projection Time", value: "3 mins", description: "Easy calculation flow" },
-      { metric: "Scholarship Matches Found", value: "24k+", description: "Aggregate index scrapers daily" }
+      { metric: "Amortization Math", value: "100%", description: "Precise interest calculator outputs" },
+      { metric: "Page Load Speed", value: "0.3s", description: "Optimized static caching assets" }
     ],
     lessonsLearned: "Clear visual charting does more to reduce debt stress than complex spreadsheet analysis models.",
     github: "",
-    liveDemo: "",
-    nextProject: "murph",
-    prevProject: "digital-mentor"
+    liveDemo: "https://edfinlo.com/",
+    nextProject: "remitout-loan",
+    prevProject: "inventry-crm"
   },
   {
-    title: "Murph",
-    slug: "murph",
-    description: "A focus-oriented developer portfolio showcasing hardware integrations and custom terminal command utilities.",
-    thumbnail: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=600&auto=format&fit=crop",
-    tags: ["React", "Framer Motion", "Tailwind CSS", "Vite"],
-    overview: "Murph is a developer dashboard showing real-time desktop monitoring statistics, command logs, and project directories inside a retro UI shell.",
-    problem: "Most developer portfolios are static pages that do not show real hardware integration capabilities or live code actions.",
-    solution: "I integrated terminal consoles allowing users to run sandboxed shell commands, showcasing live memory updates and visual logs.",
-    development: "Created standard visual components, built the web-based shell terminal emulator, and wrapped monitoring components using lightweight state loops.",
-    challenges: "Managing keyboard trap states in the terminal window for mobile layout views was solved using overlay keypads.",
+    title: "Remitout Loan",
+    slug: "remitout-loan",
+    description: "An eligibility check portal and secure document upload panel matching study-abroad students to bank lenders.",
+    thumbnail: "/Remitout loan/Home page.png",
+    tags: ["React", "Node.js", "Express", "MongoDB"],
+    overview: "Remitout Loan is a secure financial loan matching portal designed for student study-abroad applications, tracking credit scores and matching users with bank partnerships.",
+    problem: "Applying for international study-abroad loans is a complex process. Students struggle to compare interest rates and upload financial verifications securely.",
+    solution: "I built an interactive portal with loan eligibility calculators, secure document upload pipelines, and direct partner lender routing integrations.",
+    development: "Constructed the multi-step form workflow first, integrated the file storage API pipeline, and connected partner eligibility webhooks.",
+    challenges: "Ensuring secure uploads for large financial PDF documents while maintaining responsive form states was resolved using chunked storage uploads.",
     techStack: [
       { name: "React", category: "Frontend" },
-      { name: "Framer Motion", category: "Animations" },
-      { name: "Tailwind CSS", category: "Styling" },
-      { name: "Vite", category: "Build Tools" }
+      { name: "Node.js", category: "Backend" },
+      { name: "Express", category: "API Router" },
+      { name: "MongoDB", category: "Database" }
     ],
-    gallery: [],
+    gallery: [
+      { src: "/Remitout loan/Home page.png", alt: "Remitout student loan application dashboard" }
+    ],
     results: [
-      { metric: "Visitor Interaction Time", value: "4.5m", description: "Terminal sandbox command logs" },
-      { metric: "Page Load Speed", value: "0.4s", description: "Minimal JS script weights" }
+      { metric: "Application conversion", value: "+45%", description: "Simplified interactive multi-steps" },
+      { metric: "File Processing", value: "< 2s", description: "Encrypted document pipeline uploads" }
     ],
-    lessonsLearned: "Gamification and sandboxed CLI utilities are extremely good hooks for developer interactions.",
+    lessonsLearned: "Reducing form complexity from one long list into structured tabs dramatically increases user completions.",
     github: "",
-    liveDemo: "",
+    liveDemo: "https://loan-remitout-com.vercel.app/",
     nextProject: "word-blog",
     prevProject: "edfinlo"
   },
   {
     title: "WordBlog",
     slug: "word-blog",
-    description: "A developer blog platform prioritizing typographic hierarchy, dark mode variations, and light markdown imports.",
-    thumbnail: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=600&auto=format&fit=crop",
+    description: "A fast statically generated markdown technical blog utilizing zero cumulative layout shifts.",
+    thumbnail: "/WordBlog/Home Page.png",
     tags: ["Next.js", "MDX", "Tailwind CSS", "Vercel"],
-    overview: "WordBlog parses file layouts to compile statically served web posts with clean typographic hierarchy and light code snippet blocks.",
-    problem: "Content systems are bloated with JavaScript, loading large chunks of scripts for basic text displays.",
-    solution: "I compiled posts into pure HTML at build time using Next.js static page generation, resulting in near-instant page load responses.",
+    overview: "WordBlog is a developer-focused blog publication platform prioritizing high-performance static rendering, clean syntax highlights, and markdown content compilation.",
+    problem: "Common blog frameworks load excess JavaScript bundles, leading to slow page performance and layout shifts.",
+    solution: "I built a statically compiled blog using Next.js static site generation (SSG) with MDX files and zero cumulative layout shift (CLS).",
     development: "Set up the MDX layout engine, configured syntax highlighters for code blocks, and designed customizable typography presets.",
     challenges: "Designing fluid code-highlighting blocks that look correct in both dark mode and light accents without script layout shifts.",
     techStack: [
       { name: "Next.js", category: "Framework" },
-      { name: "MDX", category: "Content Engine" },
-      { name: "Tailwind CSS", category: "Design System" }
+      { name: "MDX", category: "MDX Content Compiler" },
+      { name: "Tailwind CSS", category: "Styling" }
     ],
-    gallery: [],
+    gallery: [
+      { src: "/WordBlog/Home Page.png", alt: "WordBlog main homepage feed" },
+      { src: "/WordBlog/Home page 2.png", alt: "Alternative blogs feed page layout" },
+      { src: "/WordBlog/About Section.png", alt: "Blog about author page panel view" },
+      { src: "/WordBlog/Blogs slideshow.png", alt: "Statically served featured posts slider" },
+      { src: "/WordBlog/Loading Screen.png", alt: "Seamless custom loading visual overlay" },
+      { src: "/WordBlog/Various Blogs.png", alt: "Technical articles lists view panel" }
+    ],
     results: [
-      { metric: "Lighthouse Performance", value: "100/100", description: "Statically compiled HTML assets" },
-      { metric: "Total Bundle size", value: "48KB", description: "Extremely light footprint" }
+      { metric: "Lighthouse Score", value: "100/100", description: "Statically compiled HTML scripts" },
+      { metric: "Static bundle size", value: "48KB", description: "Lightweight javascript weight" }
     ],
-    lessonsLearned: "Markdown structures are the cleanest format for technical write-ups and fast build deployments.",
+    lessonsLearned: "Markdown static compiling produces search-engine friendly pages that load immediately.",
     github: "",
     liveDemo: "",
-    nextProject: "inventory-crm",
-    prevProject: "murph"
+    nextProject: "organic-sense",
+    prevProject: "remitout-loan"
   }
 ];
