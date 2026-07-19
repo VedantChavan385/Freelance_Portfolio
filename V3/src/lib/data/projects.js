@@ -189,7 +189,7 @@ export const PROJECTS = [
     title: "WordBlog",
     slug: "word-blog",
     description: "A fast statically generated markdown technical blog utilizing zero cumulative layout shifts.",
-    thumbnail: "/WordBlog/Home Page.png",
+    thumbnail: "./WordBlog/Various Blogs.png",
     tags: ["Next.js", "MDX", "Tailwind CSS", "Vercel"],
     overview: "WordBlog is a developer-focused blog publication platform prioritizing high-performance static rendering, clean syntax highlights, and markdown content compilation.",
     problem: "Common blog frameworks load excess JavaScript bundles, leading to slow page performance and layout shifts.",
